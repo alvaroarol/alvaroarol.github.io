@@ -6,7 +6,7 @@ var solutions = findWords(gameLetters, allWords);
 // Listeners
 document.getElementById("long-word-form").addEventListener("submit", function(event) {
 	event.preventDefault();
-	var wordGuess = document.getElementById("long-word-input").value;
+	var wordGuess = document.getElementById("long-word-input").value.toLowerCase();
 	if(checkWordWithLetters(gameLetters, wordGuess) && allWords.includes(wordGuess)) {
 		document.getElementById("long-word-result").innerHTML = "Congrats, your word is valid! :)";
 	} else {
